@@ -1,11 +1,16 @@
 function calculator(a, b) {
-  for (let i = 0; i < b; i++) {
     let str = "";
-    for (let j = 0; j < a; j++) {
-      str = str + "*"
+    for (let i = 0; i < b; i++) {
+        for (let j = 0; j < a; j++) {
+            str = str + "*"
+        }
     }
-    console.log(str)
-  }
+}
+
+function good(a, b) {
+    const row = '*'.repeat(a)
+    for (let i = 0; i < b; i++) {
+    }
 }
 
 calculator(5, 3)

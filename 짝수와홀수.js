@@ -13,4 +13,8 @@ function solution(num) {
 
 }
 
+function evenOrOdd(num) {
+  return num % 2 ? "Odd" : "Even";
+}
+
 solution(1232154155232)
