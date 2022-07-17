@@ -2,15 +2,11 @@ function solution(participant, completion) {
     var answer = '';
     participant=participant.sort()
     completion=completion.sort()
-    for (let i = 0; i < completion.length; i++) {
-        let a = participant.indexOf(completion[i])
-        participant.splice(a, 1)
+    for (let i = 0; i < participant.length; i++) {
+        if (participant[i] !== completion[i]) {
+            return answer = (participant[i])
+        }
     }
-    answer = participant.pop()
-    console.log(answer)
-    return answer;
 }
 
-console.log()
-
-solution(["marina", "josipa", "nikola", "vinko", "filipa"], ["josipa", "filipa", "marina", "nikola"])
+solution(["eden", "kiki", "eden"], 		["eden", "kiki"]	)
