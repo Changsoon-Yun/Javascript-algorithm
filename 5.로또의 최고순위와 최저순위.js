@@ -30,7 +30,10 @@ function solution(lottos, win_nums) {
         case 2:
             answer.push(5)
             break
-        case 1 || 0:
+        case 1:
+            answer.push(6)
+            break
+        case 0:
             answer.push(6)
             break
     }
@@ -51,7 +54,10 @@ function solution(lottos, win_nums) {
         case 2:
             answer.push(5)
             break
-        case 1 || 0:
+        case 1:
+            answer.push(6)
+            break
+        case 0:
             answer.push(6)
             break
     }
