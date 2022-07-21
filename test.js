@@ -1,21 +1,24 @@
-function solution(nums) {
-    let answer = 0;
-    const length = nums.length;
-    for (let i = 0; i < length; i++) {
-        for (let j = i + 1; j < length; j++) {
-            for (let k = j + 1; k < length; k++) {
-                const sum = nums[i] + nums[j] + nums[k];
-                if (isPrime(sum)) answer += 1;
-            }
-        }
+function solution(n) {
+    let result = 0;
+    let str = n.toString()
+    for (let i = 0; i < str.length; i++) {
+        result += Number(str[i])
     }
-
-    return answer;
+    str = str.split('').reverse().join('+')
+    result = str + '=' + result
+    return result;
 }
 
-function isPrime(num) {
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-        if (num % i === 0) return false;
-    }
-    return num >= 2;
-}
+console.log(solution(718253))
+
+
+// function solution(n) {
+//     let sum = 0;
+//     let list = String(n).split("").reverse().join('+')
+//     n = String(n)
+//     for (let i = 0; i < n.length; i++) {
+//         sum += parseInt(n[i])
+//     }
+//     return console.log(`"${list}=${sum}"`)
+// }
+// solution(718253)
