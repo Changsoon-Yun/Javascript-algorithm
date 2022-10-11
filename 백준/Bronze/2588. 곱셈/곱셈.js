@@ -9,10 +9,6 @@ let one = number1[0] * 100;
 let ten = number1[1] * 10;
 let hundred = number1[2];
 
-for (let i = 0; i < number1.length - 1; i++) {
-  for (let j = 0; j < number1.length - 1; j++) {}
-}
-
 line3 =
   one * Number(number2[2]) +
   ten * Number(number2[2]) +
