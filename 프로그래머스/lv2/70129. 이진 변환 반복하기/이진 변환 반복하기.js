@@ -10,7 +10,6 @@ function solution(s) {
     answer[0] = transNum;
     answer[1] = totalNum;
 
-    console.log(answer);
     return answer;
   }
 
