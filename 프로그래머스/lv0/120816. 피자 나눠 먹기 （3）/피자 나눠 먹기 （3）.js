@@ -1,0 +1,1 @@
+const solution = (n, man) => Math.ceil(man / n);
