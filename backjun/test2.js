@@ -1,22 +1,19 @@
-let fs = require("fs");
-let input = fs.readFileSync("/dev/stdin").toString().split("\n");
+function solution(A, B) {
+  var answer = 0;
 
-let number1 = input[0];
-let number2 = input[1];
+  A.sort((a, b) => {
+    return a - b;
+  });
 
-let one = number1[0] * 100;
-let ten = number1[1] * 10;
-let hundred = number1[2];
+  B.sort((a, b) => {
+    return a - b;
+  });
 
-let line3 = one * number2[2] + ten * number2[2] + hundred * number2[2];
+  for (let i = 0; i < A.length; i++) {
+    answer += A[i] * B[B.length - 1 - i];
+  }
 
-let line4 = one * number2[1] + ten * number2[1] + hundred * number2[1];
+  return answer;
+}
 
-let line5 = one * number2[0] + ten * number2[0] + hundred * number2[0];
-
-let line6 = line3 + line4 * 10 + line5 * 100;
-
-console.log(line3);
-console.log(line4);
-console.log(line5);
-console.log(line6);
+solution([1, 4, 2], [5, 4, 4]);
