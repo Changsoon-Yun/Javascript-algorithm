@@ -11,4 +11,4 @@ function solution(my_string) {
   console.log(answer);
   return answer;
 }
-solution("cccCCC");
+solution("abCdEfghIJ");
