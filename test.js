@@ -1,14 +1,5 @@
-function solution(my_string) {
-  var answer = "";
-  let reg1 = /^[a-z]/;
-  let reg2 = /^[A-Z]/;
-
-  answer = my_string
-    .split("")
-    .map((v) => (v.match(reg1) ? v.toUpperCase() : v.toLowerCase()))
-    .join("");
-
-  console.log(answer);
-  return answer;
+function solution(list,n) {
+  list.sort((a,b)=>a - b)
+  return list.sort((a,b)=> Math.abs(n-b) - Math.abs(n-a)).reverse()
 }
-solution("abCdEfghIJ");
+solution([10,9,8,7,6,5,4,3,2,1,11],6);
