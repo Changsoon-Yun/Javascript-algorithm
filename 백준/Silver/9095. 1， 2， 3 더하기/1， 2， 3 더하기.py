@@ -1,8 +1,7 @@
-from collections import deque
-
 import sys
 
-t = int(input())
+
+t = int(sys.stdin.readline())
 
 nums = [1, 2, 3]
 
@@ -11,6 +10,8 @@ def backtracking(target):
     global answer
     if sum(stack) == target:
         answer += 1
+        return
+    if sum(stack) > target:
         return
     for num in nums:
         if sum(stack) < target:
