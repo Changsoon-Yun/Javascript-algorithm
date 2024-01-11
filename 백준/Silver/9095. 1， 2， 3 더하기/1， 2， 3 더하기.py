@@ -1,0 +1,29 @@
+from collections import deque
+
+import sys
+
+t = int(input())
+
+nums = [1, 2, 3]
+
+
+def backtracking(target):
+    global answer
+    if sum(stack) == target:
+        answer += 1
+        return
+    for num in nums:
+        if sum(stack) < target:
+            stack.append(num)
+            backtracking(target)
+            stack.pop()
+
+    return answer
+
+
+for _ in range(t):
+    stack = []
+    answer = 0
+
+    backtracking(int(input()))
+    print(answer)
