@@ -14,12 +14,10 @@ def backtracking(target):
     if sum(stack) > target:
         return
     for num in nums:
-        if sum(stack) < target:
+        if sum(stack) + num <= target:
             stack.append(num)
             backtracking(target)
             stack.pop()
-
-    return answer
 
 
 for _ in range(t):
